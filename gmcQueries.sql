@@ -1,66 +1,24 @@
-﻿CREATE TABLE MOVIES (  
-    id					INTEGER			NOT NULL,  
-    title               VARCHAR(50)     NOT NULL,  
-    description         VARCHAR(500),  
-    runtime             INTEGER,  
-    rating              VARCHAR(5), 
-    rt_rating           INTEGER, 
-    user_rating         INTEGER, 
-    release_year        INTEGER,      
-    PRIMARY KEY(id) 
-)
+﻿--SQL Query 1: Computes a join of at least three tables
+--Show all comedies from 2017 that are still in theaters
 
+SELECT title AS "2017 comedy movies still in theaters"
+FROM GENRES JOIN MOVIES ON movie_id = id JOIN LOCATIONS ON id = LOCATIONS.movie_id
+WHERE genre = 'Comedy' AND release_year = 2017 AND location = 'Theaters'
 
-CREATE TABLE GENRES (  
-    movie_id			INTEGER			NOT NULL, 
-    genre				VARCHAR(15)		NOT NULL,  
-	PRIMARY KEY(movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
-)
+--SQL Query 2: Uses nested queries with the ANY or ALL operator and uses a GROUP BY clause
+--SQL Query 3: A correlated nested query
+--SQL Query 4: Uses a FULL JOIN
+--SQL Query 5: Uses nested queries with any of the set operations UNION, EXCEPT, or INTERSECT
 
-CREATE TABLE LOCATIONS (  
-    movie_id			INTEGER			NOT NULL,  
-    location			VARCHAR(25), 
-	PRIMARY KEY(movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
-)
+--SQL Query 6: Create your  own non-trivial SQL query
+--List all action movies from 2017 with a rating of at least 70% rating from Rotten Tomatoes
 
-CREATE TABLE DIRECTORS (  
-    movie_id			INTEGER			NOT NULL, 
-    fname				VARCHAR(20),  
-    lname				VARCHAR(20),  
-	PRIMARY KEY(movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
-)
+SELECT title AS 'Top Action Movies of 2017', rt_rating AS 'Rotten Tomatoes Score' 
+FROM MOVIES JOIN GENRES ON id = movie_id
+WHERE GENRES.genre = 'Action' AND MOVIES.rt_rating >= 70
+ORDER BY rt_rating DESC
 
-CREATE TABLE ROLES (  
-    movie_id			INTEGER			NOT NULL, 
-    actor_id			INTEGER			UNIQUE,  
-    fname				VARCHAR(25),  
-    lname				VARCHAR(25),  
-    role				VARCHAR(25),  
-	PRIMARY KEY(movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE  
-)
-
-
---REM MOVIE 1 ========================================================
-
-INSERT INTO 	MOVIES
-VALUES			(5000, 'Get Out', 'It''s time for a young African-American to meet with his white girlfriend''s parents for a weekend in their secluded estate in the woods, but before long, the friendly and polite ambience will give way to a nightmare', 104, 'R', 99, 7.7, 2017);
-
-INSERT INTO GENRES VALUES (5000, 'Horror');
-INSERT INTO GENRES VALUES (5000, 'Mystery');
-INSERT INTO GENRES VALUES (5000, 'Thriller');
-
-
-INSERT INTO LOCATIONS VALUES (5000, 'Amazon Video');
-INSERT INTO LOCATIONS VALUES (5000, 'Google Play');
-INSERT INTO LOCATIONS VALUES (5000, 'YouTube');
-INSERT INTO LOCATIONS VALUES (5000, 'HBO Go');
-
-INSERT INTO DIRECTORS VALUES (5000, 'Jordan', 'Peele');
-
-INSERT INTO ROLES VALUES (5000, 100, 'Daniel', 'Kaluuya', 'Chris Washington');
-INSERT INTO ROLES VALUES (5000, 101, 'Allison', 'Williams', 'Rose Armitage');
-INSERT INTO ROLES VALUES (5000, 102, 'Catherine', 'Keener', 'Missy Armitage');	
+--SQL Query 7: Create your  own non-trivial SQL query
+--SQL Query 8: Create your  own non-trivial SQL query
+--SQL Query 9: Create your  own non-trivial SQL query
+--SQL Query 10: Create your  own non-trivial SQL query
