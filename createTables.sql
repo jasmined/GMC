@@ -15,14 +15,14 @@ CREATE TABLE GENRES (
     movie_id			INTEGER			NOT NULL, 
     genre				VARCHAR(15)		NOT NULL,  
 	PRIMARY KEY(movie_id, genre),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
+    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE	ON UPDATE CASCADE
 )
 
 CREATE TABLE LOCATIONS (  
     movie_id			INTEGER			NOT NULL,  
     location			VARCHAR(25)		NOT NULL, 
 	PRIMARY KEY(movie_id, location),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
+    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE	ON UPDATE CASCADE
 )
 
 CREATE TABLE DIRECTORS (  
@@ -30,7 +30,7 @@ CREATE TABLE DIRECTORS (
     fname				VARCHAR(20),  
     lname				VARCHAR(20),  
 	PRIMARY KEY(movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE 
+    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE	ON UPDATE CASCADE
 )
 
 CREATE TABLE ROLES (  
@@ -40,5 +40,5 @@ CREATE TABLE ROLES (
     lname				VARCHAR(25)		NOT NULL,  
     role				VARCHAR(25)		NOT NULL,  
 	PRIMARY KEY(actor_id, movie_id),
-    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE  
+    FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE  ON UPDATE CASCADE
 )
