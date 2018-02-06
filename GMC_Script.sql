@@ -1,7 +1,7 @@
 ﻿--	START OF SCRIPT
---  -----------------------------------------------------------------------------------
+--	-----------------------------------------------------------------------------------
 --	Project Phase II
---  Group 8 (Get Movies & Chill)
+--	Group 8 (Get Movies & Chill)
 --	Jasmine Dacones, Trinh Nguyen, Trung Thai
 --	This script was executed on Microsoft SQL
 --	===================================================================================
@@ -13,13 +13,13 @@
 
 	CREATE TABLE MOVIES (  
 		id					INTEGER			NOT NULL,  
-		title               VARCHAR(50)     NOT NULL,  
-		description         VARCHAR(500),  
+		title               VARCHAR(50)		NOT NULL,  
+		description         VARCHAR(500)				DEFAULT 'Unknown',
 		runtime             INTEGER			NOT NULL,
-		rating              VARCHAR(5)		NOT NULL, 
-		rt_rating           INTEGER, 
-		user_rating         DECIMAL(2,1), 
-		release_year        INTEGER			NOT NULL,      
+		rating              VARCHAR(5)		NOT NULL	DEFAULT 'NR',
+		rt_rating           INTEGER						CHECK(rt_rating <= 100),
+		user_rating         DECIMAL(2,1)				DEFAULT 0.0		CHECK(user_rating <= 10.0),
+		release_year        INTEGER			NOT NULL,   CHECK(release_year <= 2018),   
 		PRIMARY KEY(id) 
 	)
 
@@ -35,7 +35,7 @@
 --	Stores the places a movie can be viewed
 	CREATE TABLE LOCATIONS (  
 		movie_id			INTEGER			NOT NULL,  
-		location			VARCHAR(25)		NOT NULL, 
+		location			VARCHAR(25)		NOT NULL	DEFAULT 'YouTube', 
 		PRIMARY KEY(movie_id, location),
 		FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE	ON UPDATE CASCADE
 	)
@@ -43,8 +43,8 @@
 --	Stores the full name of a director for a movie
 	CREATE TABLE DIRECTORS (  
 		movie_id			INTEGER			NOT NULL, 
-		fname				VARCHAR(20),  
-		lname				VARCHAR(20),  
+		fname				VARCHAR(20)		NOT NULL	CHECK (fname > ''),
+		lname				VARCHAR(20)		NOT NULL	CHECK (lname > ''), 
 		PRIMARY KEY(movie_id),
 		FOREIGN KEY(movie_id) references MOVIES(id) ON DELETE CASCADE	ON UPDATE CASCADE
 	)
@@ -507,3 +507,7 @@
 
 --	-----------------------------------------------------------------------------------
 --	END OF SCRIPT (February 5, 2018)
+
+--	FOR RE-RUNS
+--	DROP TABLE ROLES, GENRES, LOCATIONS, DIRECTORS, MOVIES
+
