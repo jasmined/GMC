@@ -83,7 +83,7 @@
 	INSERT INTO LOCATIONS VALUES (5000, 'YouTube');
 	INSERT INTO LOCATIONS VALUES (5000, 'HBO Go');
 
-	INSERT INTO DIRECTORS VALUES (1, 'Jordan', 'Peele', to_date('19790121','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (1, 'Jordan', 'Peele', convert(datetime,'19790121',101));
 
 	INSERT INTO ROLES VALUES (5000, 100, 'Daniel', 'Kaluuya', 'Chris Washington');
 	INSERT INTO ROLES VALUES (5000, 101, 'Allison', 'Williams', 'Rose Armitage');
@@ -102,7 +102,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5001, 'Theaters');
 
-	INSERT INTO DIRECTORS VALUES (2, 'Jake', 'Kasdan', to_date('19741028','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (2, 'Jake', 'Kasdan', convert(datetime,'19741028',101));
 
 	INSERT INTO ROLES VALUES (5001, 103, 'Dwayne', 'Johnson', 'Spencer');
 	INSERT INTO ROLES VALUES (5001, 104, 'Kevin', 'Hart', 'Fridge');
@@ -125,7 +125,7 @@
 	INSERT INTO LOCATIONS VALUES (5002, 'Google Play');
 	INSERT INTO LOCATIONS VALUES (5002, 'YouTube');
 
-	INSERT INTO DIRECTORS VALUES (3, 'Tim', 'Miller', to_date('19580922','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (3, 'Tim', 'Miller', convert(datetime,'19580922',101));
 
 	INSERT INTO ROLES VALUES (5002, 108, 'Ryan', 'Reynolds', 'Wade');
 	INSERT INTO ROLES VALUES (5002, 109, 'TJ', 'Miller', 'Weasel');
@@ -144,7 +144,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5003, 'Theaters');
 
-	INSERT INTO DIRECTORS VALUES (4, 'Taika', 'Waititi', to_date('19750816','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (4, 'Taika', 'Waititi', convert(datetime,'19750816',101));
 
 	INSERT INTO ROLES VALUES (5003, 110, 'Chris', 'Hemsworth', 'Thor');
 	INSERT INTO ROLES VALUES (5003, 111, 'Tom', 'Hiddleston', 'Loki');
@@ -163,7 +163,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5004, 'Theaters');
 
-	INSERT INTO DIRECTORS VALUES (5, 'Denis', 'Villeneuve', to_date('19671003','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (5, 'Denis', 'Villeneuve', convert(datetime,'19671003',101));
 
 	INSERT INTO ROLES VALUES (5004, 113, 'Ryan', 'Gosling', 'K');
 	INSERT INTO ROLES VALUES (5004, 114, 'Ana de', 'Armas', 'Joi');
@@ -182,7 +182,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5005, 'Theaters');
 
-	INSERT INTO DIRECTORS VALUES (6, 'Wes', 'Ball', to_date('19801028','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (6, 'Wes', 'Ball', convert(datetime,'19801028',101));
 
 	INSERT INTO ROLES VALUES (5005, 116, 'Dylan', 'O''Brien', 'Thomas');
 	INSERT INTO ROLES VALUES (5005, 117, 'Ki Hong', 'Lee', 'Minho');
@@ -203,7 +203,7 @@
 	INSERT INTO LOCATIONS VALUES (5006, 'YouTube');
 	INSERT INTO LOCATIONS VALUES (5006, 'Google Play');
 
-	INSERT INTO DIRECTORS VALUES (7, 'Andy', 'Muschietti', to_date('19730826','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (7, 'Andy', 'Muschietti', convert(datetime,'19730826',101));
 
 	INSERT INTO ROLES VALUES (5006, 119, 'Bill', 'Skargard', 'Pennywise');
 	INSERT INTO ROLES VALUES (5006, 120, 'Jaden', 'Lieberher', 'Bill Denbrough');
@@ -226,7 +226,7 @@
 	INSERT INTO LOCATIONS VALUES (5007, 'YouTube');
 	INSERT INTO LOCATIONS VALUES (5007, 'Google Play');
 
-	INSERT INTO DIRECTORS VALUES (8, 'Michael', 'Spierig', to_date('19760429','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (8, 'Michael', 'Spierig', convert(datetime,'19760429',101));
 
 	INSERT INTO ROLES VALUES (5007, 122, 'Matt', 'Passmore', 'Logan Nelson');
 	INSERT INTO ROLES VALUES (5007, 123, 'Tobin', 'Bell', 'Jigsaw');
@@ -246,7 +246,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5008, 'Theater');
 
-	INSERT INTO DIRECTORS VALUES (9, 'Trish', 'Sie', to_date('19760401','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (9, 'Trish', 'Sie', convert(datetime,'19760401',101));
 
 	INSERT INTO ROLES VALUES (5008, 125, 'Anna', 'Kendrick', 'Beca');
 	INSERT INTO ROLES VALUES (5008, 126, 'Rebel', 'Wilson', 'Fat Amy');
@@ -268,7 +268,7 @@
 	INSERT INTO LOCATIONS VALUES (5009, 'YouTube');
 	INSERT INTO LOCATIONS VALUES (5009, 'Google Play');
 
-	INSERT INTO DIRECTORS VALUES (10, 'Matthew', 'Vaughn', to_date('19710307','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (10, 'Matthew', 'Vaughn', convert(datetime,'19710307',101));
 
 	INSERT INTO ROLES VALUES (5009, 128, 'Taron', 'Egerton', 'Eggsy');
 	INSERT INTO ROLES VALUES (5009, 129, 'Colin', 'Firth', 'Harry Hart');
@@ -292,7 +292,7 @@
 	INSERT INTO LOCATIONS VALUES (5010, 'iTunes');
 	INSERT INTO LOCATIONS VALUES (5010, 'Vudu');
 
-	INSERT INTO DIRECTORS VALUES (11, 'Christopher', 'Nolan', to_date('19700730','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (11, 'Christopher', 'Nolan', convert(datetime,'19700730',101));
 
 	INSERT INTO ROLES VALUES (5010, 131, 'Christian', 'Bale', 'Bruce Wayne');
 	INSERT INTO ROLES VALUES (5010, 132, 'Heath', 'Ledger', 'Joker');
@@ -313,7 +313,7 @@
 	INSERT INTO LOCATIONS VALUES (5011, 'iTunes');
 	INSERT INTO LOCATIONS VALUES (5011, 'Vudu');
 
-	INSERT INTO DIRECTORS VALUES (12, 'Quentin', 'Tarantino', to_date('19630327','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (12, 'Quentin', 'Tarantino', convert(datetime,'19630327',101));
 
 	INSERT INTO ROLES VALUES (5011, 134, 'John', 'Travolta', 'Vincent Vega');
 	INSERT INTO ROLES VALUES (5011, 135, 'Uma', 'Thurman', 'Mia Wallce');
@@ -332,7 +332,7 @@
 
 	INSERT INTO LOCATIONS VALUES (5012, 'Amazon Video');
 
-	INSERT INTO DIRECTORS VALUES (13, 'Hayao', 'Miyazaki', to_date('19410105','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (13, 'Hayao', 'Miyazaki', convert(datetime,'19410105',101));
 
 	INSERT INTO ROLES VALUES (5012, 137, 'Daveigh', 'Chase', 'Chihiro');
 	INSERT INTO ROLES VALUES (5012, 138, 'Suzanne', 'Pleshette', 'Yubaba / Zeniba');
@@ -355,7 +355,7 @@
 	INSERT INTO LOCATIONS VALUES (5013, 'iTunes');
 	INSERT INTO LOCATIONS VALUES (5013, 'Vudu');
 
-	INSERT INTO DIRECTORS VALUES (14, 'Frank', 'Darabont', to_date('19590128','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (14, 'Frank', 'Darabont', convert(datetime,'19590128', 101));
 
 	INSERT INTO ROLES VALUES (5013, 140, 'Tom', 'Hanks', 'Paul Edgecomb');
 	INSERT INTO ROLES VALUES (5013, 141, 'Michael Clarke', 'Duncan', 'John Coffey');
@@ -378,7 +378,7 @@
 	INSERT INTO LOCATIONS VALUES (5014, 'iTunes');
 	INSERT INTO LOCATIONS VALUES (5014, 'Vudu');
 
-	INSERT INTO DIRECTORS VALUES (15, 'Pete', 'Docter', to_date('19681009','YYYYMMDD'));
+	INSERT INTO DIRECTORS VALUES (15, 'Pete', 'Docter', convert(datetime,'19681009', 101));
 
 	INSERT INTO ROLES VALUES (5014, 143, 'Billy', 'Crystal', 'Mike');
 	INSERT INTO ROLES VALUES (5014, 144, 'John', 'Goodman', 'Sullivan');
