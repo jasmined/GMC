@@ -24,7 +24,7 @@
         </div>
     </form>
     <p style="color: #0000CC">
-        <em style="font-weight: 700">Welcome! Ever encountered days on which you couldn&#39;t decide what to watch? Maybe you found a new friend and you want to impress them with high rated movies for a specific genre. Well you came to the right place!</em></p>
+        <em style="font-weight: 700" draggable="auto">Welcome! Ever encountered days on which you couldn&#39;t decide what to watch? Maybe you found a new friend and you want to impress them with high rated movies for a specific genre. Well you came to the right place!</em></p>
     <p>
         &nbsp;</p>
     <p class="auto-style1">
